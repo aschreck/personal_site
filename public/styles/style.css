@@ -1,0 +1,30 @@
+body {
+    background-color: #F8F8F8;
+}
+.headshot {
+    border-radius: 70px;
+}
+
+.center-content {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 6%;
+    padding-bottom: 1%;
+}
+
+.centered {
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+
+.home-txt {
+    padding: 10px;
+}
+
+.final-battle {
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+}
+
