@@ -1,6 +1,8 @@
 
 const express = require('express');
-const port = 3000;
+// const port = 3000;
+var port = process.env.PORT || 3000;
+
 
 const app = express();
 
@@ -8,6 +10,10 @@ const app = express();
 let aCount = 0;
 let sCount = 0;
 app.use(express.static(__dirname + '/public'));
+
+// app.get("/") function(req,res) {
+
+// }
 
 app.get('/favicon.ico', function(req, res) {
     res.status(204);
