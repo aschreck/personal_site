@@ -9,6 +9,10 @@ app.use(express.static(__dirname + '/public'));
 let aCount = 0;
 let sCount = 0;
 
+app.get('/favicon.ico', function(req, res) {
+    res.status(204);
+})
+
 app.post("/a-increment", (req, res) => {
     aCount += 1;
     return res.send(JSON.stringify({aristotleCount: aCount}));
