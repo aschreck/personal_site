@@ -4,10 +4,14 @@ const port = 3000;
 
 const app = express();
 
-app.use(express.static(__dirname + '/public'));
 
 let aCount = 0;
 let sCount = 0;
+app.use(express.static(__dirname + '/public'));
+
+app.get('/favicon.ico', function(req, res) {
+    res.status(204);
+});
 
 app.post("/a-increment", (req, res) => {
     aCount += 1;

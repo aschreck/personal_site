@@ -16,6 +16,7 @@ function aristotleListener() {
 //make a fetch call that updates the variable. 
     fetchAristotle()
 }
+
 function fetchAristotle() {
     fetch("/a-increment", {method: "POST"})
     .then((resp)=>{
