@@ -18,7 +18,7 @@ function aristotleListener() {
 }
 
 function fetchAristotle() {
-    fetch("/a-increment", {method: "GET"})
+    fetch("/a-increment", {method: "POST"})
     .then((resp)=>{
         return resp.json()
     })
@@ -32,7 +32,7 @@ function shaqListener() {
 }
 
 function fetchShaq() {
-    fetch("/s-increment", {method: "GET"})
+    fetch("/s-increment", {method: "POST"})
     .then((resp)=>{
         return resp.json()
     })
