@@ -29,12 +29,12 @@ app.post("/a-increment", (req, res) => {
 })
 
 app.get("/s-value", (req, res) => {
-    return res.send(JSON.stringify({aristotleCount: sCount}));
+    return res.send(JSON.stringify(sCount));
 })
 
 app.post("/s-increment", (req, res) => {
     sCount += 1;
-    return res.send(JSON.stringify({shaqCount: sCount}));
+    return res.send(JSON.stringify(sCount));
 })
 
 app.use(function (req, res, next) {
