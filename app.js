@@ -42,7 +42,7 @@ app.get("/login", (req, res)=> {
     let name = req.query.name
     jsonDatabase[jsonIncrementor] = name
     jsonIncrementor += 1
-    res.cookie("ajs_"+name)
+    // res.cookie("ajs_"+name)
     return res.status(204)
 })
 
