@@ -19,9 +19,17 @@ app.get('/favicon.ico', function(req, res) {
     res.status(204);
 });
 
+app.get("/a-value", (req, res) => {
+    return res.send(JSON.stringify({aristotleCount: aCount}));
+})
+
 app.post("/a-increment", (req, res) => {
     aCount += 1;
     return res.send(JSON.stringify({aristotleCount: aCount}));
+})
+
+app.get("/s-value", (req, res) => {
+    return res.send(JSON.stringify({aristotleCount: sCount}));
 })
 
 app.post("/s-increment", (req, res) => {
