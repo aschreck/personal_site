@@ -20,7 +20,7 @@ app.get('/favicon.ico', function(req, res) {
 });
 
 app.get("/a-value", (req, res) => {
-    return res.send(JSON.stringify({aristotleCount: aCount}));
+    return res.send(JSON.stringify(aCount));
 })
 
 app.post("/a-increment", (req, res) => {
