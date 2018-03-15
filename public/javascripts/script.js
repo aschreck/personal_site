@@ -4,8 +4,6 @@ function addListeners() {
     $(".shaq-btn").on("click", shaqFu)
     $(".a-vote-btn").on("click", aristotleListener)
     $(".s-vote-btn").on("click", shaqListener)
-    fetchAristotle()
-    fetchShaq()
 }
 
 function shaqFu() {
