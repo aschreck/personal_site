@@ -4,6 +4,7 @@ function addListeners() {
     $(".shaq-btn").on("click", shaqFu)
     $(".a-vote-btn").on("click", aristotleListener)
     $(".s-vote-btn").on("click", shaqListener)
+    $(".login-btn").on("click", logIn)
 }
 
 function shaqFu() {
@@ -11,7 +12,6 @@ function shaqFu() {
 }
 
 function aristotleListener() {
-//make a fetch call that updates the variable. 
     fetchAristotle()
 }
 
@@ -37,4 +37,10 @@ function fetchShaq() {
     .then((json) => {
         $(".s-votes").text(json.shaqCount)
     })
+}
+
+function logIn() {
+   //grab the value of the input  
+   let name = $(".login-field").val()
+   //send this name to the backend with an API call. 
 }
