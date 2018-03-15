@@ -9,11 +9,12 @@ const app = express();
 
 let aCount = 0;
 let sCount = 0;
+
+let jsonDatabase = {}
+let jsonIncrementer = 1
+
 app.use(express.static(__dirname + '/public'));
 
-// app.get("/") function(req,res) {
-
-// }
 
 app.get('/favicon.ico', function(req, res) {
     res.status(204);
@@ -34,12 +35,25 @@ app.get("/s-value", (req, res) => {
 
 app.post("/s-increment", (req, res) => {
     sCount += 1;
-    return res.send(JSON.stringify(sCount));
+    return res.send(JSON.stringify({shaqCount: sCount}))
+})
+
+app.get("/login", (req, res)=> {
+    let name = req.query.name
+    jsonDatabase[jsonIncrementor] = name
+    jsonIncrementor += 1
+    res.cookie("ajs_"+name)
+    return res.status(204)
+})
+
+app.get("/login-report", (req, res)=> {
+    return res.send(JSON.stringify(jsonDatabase))
 })
 
 app.use(function (req, res, next) {
     res.status(404).send("Sorry can't find that!")
 })
+
 
 app.listen(port);
 

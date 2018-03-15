@@ -43,4 +43,5 @@ function logIn() {
    //grab the value of the input  
    let name = $(".login-field").val()
    //send this name to the backend with an API call. 
+   fetch(`/login?name=${name}`)
 }
