@@ -11,7 +11,7 @@ let aCount = 0;
 let sCount = 0;
 
 let jsonDatabase = {}
-let jsonIncrementer = 1
+let jsonIncrementor = 1
 
 app.use(express.static(__dirname + '/public'));
 
@@ -40,6 +40,8 @@ app.post("/s-increment", (req, res) => {
 
 app.get("/login", (req, res)=> {
     let name = req.query.name
+    // pry = require('pryjs')
+    // eval(pry.it)
     jsonDatabase[jsonIncrementor] = name
     jsonIncrementor += 1
     // res.cookie("ajs_"+name)
