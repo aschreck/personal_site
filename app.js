@@ -40,8 +40,6 @@ app.post("/s-increment", (req, res) => {
 
 app.get("/login", (req, res)=> {
     let name = req.query.name
-    // pry = require('pryjs')
-    // eval(pry.it)
     jsonDatabase[jsonIncrementor] = name
     jsonIncrementor += 1
     res.cookie("ajs_"+name)
